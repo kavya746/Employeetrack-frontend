@@ -9,7 +9,7 @@ const ForgotPassword = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    Axios.post("http://localhost:5000/api/user/forgot-password", { email })
+    Axios.post("https://employeetrack-backend.vercel.app/api/user/forgot-password", { email })
       .then((response) => {
         if (response.data.status) {
           alert("Check your email for reset password link");

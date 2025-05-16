@@ -25,7 +25,7 @@ const ResetPassword = () => {
       return;
     }
 
-    Axios.post(`http://localhost:5000/api/user/resetPassword/${token}`, { password })
+    Axios.post(`https://employeetrack-backend.vercel.app/api/user/resetPassword/${token}`, { password })
       .then((response) => {
         if (response.data.status) {
           alert("Password reset successful");
