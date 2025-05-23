@@ -18,11 +18,7 @@ const Add = () => {
     
     const handleChange=(e)=>{
         const {name, value, files} = e.target;
-        if(name === "image") {
-            setFormData((prevData) => ({ ...prevData, [name] : files[0]}))
-        } else {
-            setFormData((prevData) => ({ ...prevData, [name] : value}))
-        }
+        setFormData((prevData) => ({ ...prevData, [name] : value}))
     }
 
     const handleSubmit= async(e) =>{
@@ -231,20 +227,6 @@ const Add = () => {
                     </select>
                 </div>
 
-                {/*Image Upload*/}
-                <div>
-                    <label className="block text-sm font-medium text-gray-700 ">
-                        Upload Image
-                    </label>
-                    <input
-                    type="file"
-                    name="image"
-                     onChange={handleChange}
-                    placeholder="Upload Image"
-                    accept="image/*"
-                    className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
-                    />
-                </div>
             </div>
 
             <button
