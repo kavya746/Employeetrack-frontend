@@ -12,12 +12,7 @@ export const columns = [
         selector: (row) => row.name,
         sortable: true,
         width: "140px"
-    },
-    {
-        name: "Image",
-        selector: (row) => row.profileImage,
-        width: "150px"
-    },
+    },                                      
     {
         name: "Department",
         selector: (row) => row.dep_name,
